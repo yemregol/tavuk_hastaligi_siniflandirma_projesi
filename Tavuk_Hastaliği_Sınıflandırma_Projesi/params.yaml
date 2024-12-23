@@ -1,0 +1,8 @@
+AUGMENTATION: True  # Veri artırma aktif
+IMAGE_SIZE: [224, 224, 3]  # Görsel boyutu (VGG16 modeline göre)
+BATCH_SIZE: 16  # Her bir eğitim adımında kullanılacak veri sayısı
+INCLUDE_TOP: False  # Modelin üst katmanları hariç tutulacak
+EPOCHS: 1  # Eğitim epoch sayısı (bir kez eğitim yapılacak)
+CLASSES: 2  # Çıkış sınıf sayısı (örneğin: hasta ve sağlıklı)
+WEIGHTS: imagenet  # Önceden eğitilmiş ImageNet ağırlıkları kullanılacak
+LEARNING_RATE: 0.01  # Modelin öğrenme hızı

@@ -1,0 +1,21 @@
+artifacts_root: artifacts  # Tüm çıktıların saklanacağı ana klasör
+
+data_ingestion:  # Veri Alımı Aşaması
+  root_dir: artifacts/data_ingestion  # Veri alımı için ana dizin
+  source_URL: https://github.com/entbappy/Branching-tutorial/raw/master/Chicken-fecal-images.zip  # Verinin indirileceği URL
+  local_data_file: artifacts/data_ingestion/data.zip  # İndirilen veri dosyasının saklanacağı yol
+  unzip_dir: artifacts/data_ingestion  # Zip dosyasının açılacağı dizin
+
+prepare_base_model:  # Temel Model Hazırlığı Aşaması
+  root_dir: artifacts/prepare_base_model  # Model hazırlığı için ana dizin
+  base_model_path: artifacts/prepare_base_model/base_model.keras  # İlk modelin kaydedileceği yol
+  updated_base_model_path: artifacts/prepare_base_model/base_model_updated.keras  # Güncellenmiş modelin kaydedileceği yol
+
+prepare_callbacks:  # Callback Hazırlığı Aşaması
+  root_dir: artifacts/prepare_callbacks  # Callback dosyaları için ana dizin
+  tensorboard_root_log_dir: artifacts/prepare_callbacks/tensorboard_log_dir  # TensorBoard loglarının saklanacağı dizin
+  checkpoint_model_filepath: artifacts/prepare_callbacks/checkpoint_dir/model.keras  # Model checkpoint dosyasının saklanacağı yol
+
+training:  # Eğitim Aşaması
+  root_dir: artifacts/training  # Eğitim için ana dizin
+  trained_model_path: artifacts/training/model.keras  # Eğitilmiş modelin kaydedileceği yol

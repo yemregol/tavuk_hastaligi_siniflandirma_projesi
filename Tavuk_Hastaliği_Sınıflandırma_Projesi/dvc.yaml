@@ -1,0 +1,52 @@
+stages:
+  data_ingestion:  # Aşama 1: Veri Alımı
+    cmd: python src/cnnClassifier/pipeline/stage_01_data_ingestion.py  # Veri alım scriptini çalıştır
+    deps:  # Veri alımı için gereken bağımlılıklar
+      - src/cnnClassifier/pipeline/stage_01_data_ingestion.py  # Veri alım script yolu
+      - config/config.yaml  # Yapılandırma dosyası yolu
+    outs:  # Bu aşamanın çıktı dosyaları
+      - artifacts/data_ingestion/Chicken-fecal-images  # Alınan görsel verilerin yolu
+
+  prepare_base_model:  # Aşama 2: Temel Model Hazırlığı
+    cmd: python src/cnnClassifier/pipeline/stage_02_prepare_base_model.py  # Model hazırlık scriptini çalıştır
+    deps:  # Model hazırlığı için gereken bağımlılıklar
+      - src/cnnClassifier/pipeline/stage_02_prepare_base_model.py  # Model hazırlık script yolu
+      - config/config.yaml  # Yapılandırma dosyası yolu
+    params:  # Model yapılandırması için parametreler
+      - IMAGE_SIZE  # Girdi görsellerinin boyutu
+      - INCLUDE_TOP  # Üst katmanları dahil etme durumu
+      - CLASSES  # Çıkış sınıf sayısı
+      - WEIGHTS  # Kullanılacak önceden eğitilmiş ağırlıklar
+      - LEARNING_RATE  # Modelin öğrenme hızı
+    outs:  # Bu aşamanın çıktı dosyaları
+      - artifacts/prepare_base_model  # Temel modelin kaydedileceği dizin
+
+  training:  # Aşama 3: Eğitim
+    cmd: python src/cnnClassifier/pipeline/stage_03_training.py  # Eğitim scriptini çalıştır
+    deps:  # Eğitim için gereken bağımlılıklar
+      - src/cnnClassifier/pipeline/stage_03_training.py  # Eğitim script yolu
+      - src/cnnClassifier/components/prepare_callbacks.py  # Callback ayarları scripti
+      - config/config.yaml  # Yapılandırma dosyası yolu
+      - artifacts/data_ingestion/Chicken-fecal-images  # Girdi veri yolu
+      - artifacts/prepare_base_model  # Hazırlanan model yolu
+    params:  # Eğitim parametreleri
+      - IMAGE_SIZE  # Görsel boyutu
+      - EPOCHS  # Eğitim epoch sayısı
+      - BATCH_SIZE  # Batch boyutu
+      - AUGMENTATION  # Veri artırma parametreleri
+    outs:  # Bu aşamanın çıktı dosyaları
+      - artifacts/training/model.keras  # Eğitimli modelin kaydedileceği yol
+
+  evaluation:  # Aşama 4: Değerlendirme
+    cmd: python src/cnnClassifier/pipeline/stage_04_evaluation.py  # Değerlendirme scriptini çalıştır
+    deps:  # Değerlendirme için gereken bağımlılıklar
+      - src/cnnClassifier/pipeline/stage_04_evaluation.py  # Değerlendirme script yolu
+      - config/config.yaml  # Yapılandırma dosyası yolu
+      - artifacts/data_ingestion/Chicken-fecal-images  # Girdi veri yolu
+      - artifacts/training/model.keras  # Eğitimli modelin yolu
+    params:  # Değerlendirme parametreleri
+      - IMAGE_SIZE  # Görsel boyutu
+      - BATCH_SIZE  # Batch boyutu
+    metrics:  # Bu aşamada üretilen metrikler
+    - scores.json:  # Değerlendirme sonuçları JSON dosyası
+        cache: false  # Önbelleğe almadan kaydet

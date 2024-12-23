@@ -1,0 +1,571 @@
+[2024-10-30 17:36:57,262: INFO: 1170291011: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 0DB6:371823:179D761:18A1618:67226EB7
+Accept-Ranges: bytes
+Date: Wed, 30 Oct 2024 17:36:57 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ams21024-AMS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1730309816.455532,VS0,VE802
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: cae0a7f936c7ffd2c75ec0190b5a9c3e39fb8e6f
+Expires: Wed, 30 Oct 2024 17:41:57 GMT
+Source-Age: 1
+
+]
+[2024-10-30 18:23:17,260: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-30 18:23:17,395: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-31 13:21:36,511: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-31 13:21:37,482: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 7A76:3266D8:4D73C2D:50F5D7F:67238460
+Accept-Ranges: bytes
+Date: Thu, 31 Oct 2024 13:21:37 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ams21074-AMS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1730380897.854487,VS0,VE613
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 7105083a217705e7f89d23240ed4e436b6879fd7
+Expires: Thu, 31 Oct 2024 13:26:37 GMT
+Source-Age: 0
+
+]
+[2024-10-31 13:21:37,601: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-31 13:29:52,724: INFO: stage_02_prepare_base_model: *******************]
+[2024-10-31 13:29:52,724: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-31 13:29:53,072: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-31 13:29:53,201: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-31 13:29:53,294: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-31 13:35:59,436: INFO: stage_03_training: *******************]
+[2024-10-31 13:35:59,437: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-10-31 13:35:59,439: ERROR: stage_03_training: "'ConfigBox' object has no attribute 'training'"]
+Traceback (most recent call last):
+  File "box/box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 632, in box.box.Box.__getattr__
+  File "box/box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 632, in box.box.Box.__getattr__
+  File "box/box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_03_training.py", line 38, in <module>
+    obj.main()
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_03_training.py", line 22, in main
+    training_config = config.get_training_config()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/config/configration.py", line 82, in get_training_config
+    training = self.config.training
+               ^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training'"
+[2024-10-31 13:37:39,716: INFO: stage_03_training: *******************]
+[2024-10-31 13:37:39,716: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-10-31 13:37:39,719: ERROR: stage_03_training: "'ConfigBox' object has no attribute 'training'"]
+Traceback (most recent call last):
+  File "box/box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 632, in box.box.Box.__getattr__
+  File "box/box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 632, in box.box.Box.__getattr__
+  File "box/box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_03_training.py", line 38, in <module>
+    obj.main()
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_03_training.py", line 22, in main
+    training_config = config.get_training_config()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/config/configration.py", line 82, in get_training_config
+    training = self.config.training
+               ^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training'"
+[2024-10-31 13:44:44,149: INFO: stage_03_training: *******************]
+[2024-10-31 13:44:44,150: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-10-31 13:44:44,154: ERROR: stage_03_training: "'ConfigBox' object has no attribute 'training'"]
+Traceback (most recent call last):
+  File "box/box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 632, in box.box.Box.__getattr__
+  File "box/box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 632, in box.box.Box.__getattr__
+  File "box/box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_03_training.py", line 38, in <module>
+    obj.main()
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_03_training.py", line 22, in main
+    training_config = config.get_training_config()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/config/configration.py", line 82, in get_training_config
+    training = self.config.training
+               ^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training'"
+[2024-10-31 13:47:04,056: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-31 13:47:04,559: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 7A76:3266D8:4D73C2D:50F5D7F:67238460
+Accept-Ranges: bytes
+Date: Thu, 31 Oct 2024 13:47:04 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ams21082-AMS
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1730382424.328750,VS0,VE242
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 4f7fc5194c87e19917f039cf93c6d75c51b1b8fb
+Expires: Thu, 31 Oct 2024 13:52:04 GMT
+Source-Age: 0
+
+]
+[2024-10-31 13:47:04,675: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-31 13:47:07,607: INFO: stage_02_prepare_base_model: *******************]
+[2024-10-31 13:47:07,607: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-31 13:47:07,907: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-31 13:47:08,040: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-31 13:47:08,141: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-31 13:47:11,787: INFO: stage_03_training: *******************]
+[2024-10-31 13:47:11,787: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-10-31 13:47:11,790: ERROR: stage_03_training: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts/prepare_callbacks/checkpoint_dir/model.h5]
+Traceback (most recent call last):
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_03_training.py", line 38, in <module>
+    obj.main()
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_03_training.py", line 19, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/components/prepare_callbacks.py", line 36, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/components/prepare_callbacks.py", line 27, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/keras/src/callbacks/model_checkpoint.py", line 191, in __init__
+    raise ValueError(
+ValueError: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts/prepare_callbacks/checkpoint_dir/model.h5
+[2024-10-31 13:47:46,610: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-31 13:47:46,717: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 7A76:3266D8:4D73C2D:50F5D7F:67238460
+Accept-Ranges: bytes
+Date: Thu, 31 Oct 2024 13:47:46 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ams21028-AMS
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1730382467.727045,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 0068694a91814f788182deb715b8d5bf52aae73f
+Expires: Thu, 31 Oct 2024 13:52:46 GMT
+Source-Age: 42
+
+]
+[2024-10-31 13:47:46,843: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-31 13:47:49,667: INFO: stage_02_prepare_base_model: *******************]
+[2024-10-31 13:47:49,667: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-31 13:47:50,427: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-31 13:47:53,855: INFO: stage_03_training: *******************]
+[2024-10-31 13:47:53,855: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-10-31 13:49:00,485: INFO: stage_03_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-31 13:49:42,256: INFO: stage_03_training: *******************]
+[2024-10-31 13:49:42,256: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-10-31 13:51:05,494: INFO: stage_03_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-31 13:52:49,965: INFO: stage_04_evaluation: *******************]
+[2024-10-31 13:52:49,965: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-31 13:52:49,969: ERROR: stage_04_evaluation: [Errno 2] Unable to synchronously open file (unable to open file: name = 'artifacts/training/model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)]
+Traceback (most recent call last):
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_04_evaluation.py", line 29, in <module>
+    obj.main()
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/pipeline/stage_04_evaluation.py", line 19, in main
+    evaluation.evaluation()
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/components/evaluation.py", line 44, in evaluation
+    model = self.load_model(self.config.path_of_model)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/src/cnnClassifier/components/evaluation.py", line 40, in load_model
+    return tf.keras.models.load_model(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/keras/src/saving/saving_api.py", line 196, in load_model
+    return legacy_h5_format.load_model_from_hdf5(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/keras/src/legacy/saving/legacy_h5_format.py", line 116, in load_model_from_hdf5
+    f = h5py.File(filepath, mode="r")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/h5py/_hl/files.py", line 561, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/h5py/_hl/files.py", line 235, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = 'artifacts/training/model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+[2024-10-31 13:56:21,454: INFO: stage_04_evaluation: *******************]
+[2024-10-31 13:56:21,454: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-31 13:56:42,544: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-10-31 16:43:37,712: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-31 16:43:39,086: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 70F3:2B9E7A:75CB43:7A6E16:6723B3B0
+Accept-Ranges: bytes
+Date: Thu, 31 Oct 2024 16:43:39 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ams2100084-AMS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1730393018.915530,VS0,VE1099
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b8419ca8f960f54b54fc2696bf743853a7f53d58
+Expires: Thu, 31 Oct 2024 16:48:39 GMT
+Source-Age: 1
+
+]
+[2024-10-31 16:43:39,212: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-31 16:43:44,282: INFO: stage_02_prepare_base_model: *******************]
+[2024-10-31 16:43:44,282: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-31 16:43:45,082: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-31 16:43:48,585: INFO: stage_03_training: *******************]
+[2024-10-31 16:43:48,585: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-10-31 16:45:11,922: INFO: stage_03_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-31 16:45:15,220: INFO: stage_04_evaluation: *******************]
+[2024-10-31 16:45:15,220: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-31 16:45:36,107: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-10-31 18:05:41,765: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.109:8080]
+[2024-10-31 18:05:41,766: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-31 18:06:18,677: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:06:18] "GET / HTTP/1.1" 200 -]
+[2024-10-31 18:07:33,781: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/flask_cors/extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/env/lib/python3.12/site-packages/flask_cors/decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Tavuk_hastal-_s-n-fland-rma_G-r-nt-_-leme_Projesi.py/app.py", line 35, in predictRoute
+    image = request.json('image')
+            ^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+[2024-10-31 18:07:33,784: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:07:33] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-31 18:14:58,893: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.0.109:8081]
+[2024-10-31 18:14:58,893: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-31 18:15:15,492: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:15:15] "GET / HTTP/1.1" 200 -]
+[2024-10-31 18:15:26,283: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:15:26] "POST /predict HTTP/1.1" 200 -]
+[2024-10-31 18:15:48,265: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:15:48] "POST /predict HTTP/1.1" 200 -]
+[2024-10-31 18:15:55,326: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:15:55] "POST /predict HTTP/1.1" 200 -]
+[2024-10-31 18:16:04,018: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:16:04] "POST /predict HTTP/1.1" 200 -]
+[2024-10-31 18:16:09,244: WARNING: polymorphic_function: 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7d0986681620> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-10-31 18:16:09,246: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:16:09] "POST /predict HTTP/1.1" 200 -]
+[2024-10-31 18:16:59,364: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:16:59] "GET /train HTTP/1.1" 200 -]
+[2024-10-31 18:16:59,631: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:16:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-10-31 18:17:37,741: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-31 18:17:37,744: INFO: data_ingestion: File already exists of size: ~ 11345 KB]
+[2024-10-31 18:17:37,886: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-31 18:17:37,886: INFO: main: *******************]
+[2024-10-31 18:17:37,886: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-31 18:17:38,746: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-31 18:17:38,746: INFO: main: *******************]
+[2024-10-31 18:17:38,746: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-31 18:18:41,509: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-31 18:18:41,514: INFO: data_ingestion: File already exists of size: ~ 11345 KB]
+[2024-10-31 18:18:41,891: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-31 18:18:41,891: INFO: main: *******************]
+[2024-10-31 18:18:41,892: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-31 18:18:43,191: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-31 18:18:43,196: INFO: main: *******************]
+[2024-10-31 18:18:43,196: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-31 18:18:54,160: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-31 18:18:54,161: INFO: main: *******************]
+[2024-10-31 18:18:54,161: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-31 18:19:36,129: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-10-31 18:19:37,171: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:19:37] "GET /train HTTP/1.1" 200 -]
+[2024-10-31 18:20:20,229: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-31 18:20:20,229: INFO: main: *******************]
+[2024-10-31 18:20:20,229: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-31 18:20:41,107: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-10-31 18:20:41,556: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:20:41] "GET /train HTTP/1.1" 200 -]
+[2024-10-31 18:21:17,950: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:21:17] "[31m[1mGET /predict HTTP/1.1[0m" 405 -]
+[2024-10-31 18:21:38,908: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:21:38] "[31m[1mGET /predict HTTP/1.1[0m" 405 -]
+[2024-10-31 18:27:59,364: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2024-10-31 18:27:59,364: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-31 18:28:18,628: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2024-10-31 18:28:18,628: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-31 18:28:40,760: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2024-10-31 18:28:40,760: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-31 18:28:47,066: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:28:47] "GET / HTTP/1.1" 200 -]
+[2024-10-31 18:28:52,563: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:28:52] "[31m[1mGET /predict HTTP/1.1[0m" 405 -]
+[2024-10-31 18:28:52,839: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:28:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-10-31 18:30:17,056: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:30:17] "[31m[1mGET /predict HTTP/1.1[0m" 405 -]
+[2024-10-31 18:30:19,783: INFO: _internal: 127.0.0.1 - - [31/Oct/2024 18:30:19] "[31m[1mGET /predict HTTP/1.1[0m" 405 -]
+[2024-11-01 06:54:54,575: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.17:5000]
+[2024-11-01 06:54:54,576: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-11-01 06:55:03,120: INFO: _internal: 127.0.0.1 - - [01/Nov/2024 06:55:03] "GET / HTTP/1.1" 200 -]
+[2024-11-01 06:55:13,470: INFO: _internal: 127.0.0.1 - - [01/Nov/2024 06:55:13] "[31m[1mGET /predict HTTP/1.1[0m" 405 -]
+[2024-11-01 06:55:13,834: INFO: _internal: 127.0.0.1 - - [01/Nov/2024 06:55:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-11-01 06:55:20,972: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-01 06:55:20,975: INFO: data_ingestion: File already exists of size: ~ 11345 KB]
+[2024-11-01 06:55:21,133: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-11-01 06:55:21,133: INFO: main: *******************]
+[2024-11-01 06:55:21,133: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-11-01 06:55:22,080: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-11-01 06:55:22,080: INFO: main: *******************]
+[2024-11-01 06:55:22,080: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-11-01 06:56:29,784: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-11-01 06:56:29,784: INFO: main: *******************]
+[2024-11-01 06:56:29,784: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-11-01 06:56:50,829: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-11-01 06:56:51,278: INFO: _internal: 127.0.0.1 - - [01/Nov/2024 06:56:51] "GET /train HTTP/1.1" 200 -]
+[2024-11-01 06:58:18,727: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.17:8080]
+[2024-11-01 06:58:18,727: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-11-01 06:58:24,709: INFO: _internal: 127.0.0.1 - - [01/Nov/2024 06:58:24] "GET / HTTP/1.1" 200 -]
+[2024-11-01 06:58:41,122: INFO: _internal: 127.0.0.1 - - [01/Nov/2024 06:58:41] "POST /predict HTTP/1.1" 200 -]
+[2024-11-01 06:58:44,496: INFO: _internal: 127.0.0.1 - - [01/Nov/2024 06:58:44] "POST /predict HTTP/1.1" 200 -]
+[2024-11-01 06:59:03,967: INFO: _internal: 127.0.0.1 - - [01/Nov/2024 06:59:03] "[31m[1mGET /predict HTTP/1.1[0m" 405 -]
+[2024-11-01 06:59:04,320: INFO: _internal: 127.0.0.1 - - [01/Nov/2024 06:59:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
